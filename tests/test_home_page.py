@@ -17,19 +17,24 @@ class TestNavLinks:
     def test_about(self):
         self.home_page.visit_about()
         assert f'{self.home_url}#about' == self.page.url
+        self.home_page.navbar.check_visible()
 
     def test_moreinfo(self):
         self.home_page.visit_moreinfo()
         assert f'{self.home_url}#moreinfo' == self.page.url
+        self.home_page.navbar.check_visible()
 
     def test_cases(self):
         self.home_page.visit_cases()
         assert f'{self.home_url}#cases' == self.page.url
+        self.home_page.navbar.check_visible()
 
     def test_reviews(self):
         self.home_page.visit_reviews()
         assert f'{self.home_url}#Reviews' == self.page.url
+        self.home_page.navbar.check_visible()
 
     def test_contacts(self):
         self.home_page.visit_contacts()
         assert f'{self.home_url}#contacts' == self.page.url
+        self.home_page.navbar.check_visible()
