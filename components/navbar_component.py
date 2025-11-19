@@ -20,7 +20,7 @@ class NavbarComponent(BaseComponent):
         # Сслыка [О нас]
         self.about_link = Link(page, '//a[@class="tn-atom" and contains(@href,"#about")]', 'About link')
         # Ссылка [Услуги]
-        self.moreinfo_link = Link(page, '//a[@class="tn-atom" and @href="#moreinfo"][normalize-space(text())="[ Услуги ]"]', 'More info link')
+        self.moreinfo_link = Link(page, 'div[data-elem-id="1680606406485"] a.tn-atom[href="#moreinfo"]', 'More info link')
         # Ссылка [Проекты]
         self.cases_link = Link(page, '//a[@class="tn-atom" and contains(@href,"#cases")]', 'Cases link')
         # Ссылка [Отзывы]

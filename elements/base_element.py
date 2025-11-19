@@ -28,9 +28,9 @@ class BaseElement:
     
     def get_locator(self) -> Locator:
         '''
-        Формирует локатор элемента по xpath
+        Формирует локатор элемента
         '''
-        step = f'Getting locator with "xpath={self.locator_xpath}"'
+        step = f'Getting locator with "{self.locator_xpath}"'
 
         with allure.step(step):
             return self.page.locator(self.locator_xpath)
